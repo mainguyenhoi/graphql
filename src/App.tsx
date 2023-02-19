@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import './App.css';
-import { GET_LOCATIONS, GET_FILMS } from './QueryString';
+import { GET_LOCATIONS, GET_FILMS, GITHUD_GET_SCHEMA, TEST } from './QueryString';
 import { useQuery } from '@apollo/client/react';
+import { setContext } from '@apollo/client/link/context';
+
 import Router from './Router';
+import { Loading } from './Component/Loading';
 export default function App() {
-
-
 
   function DisplayLocations() {
     const variables = { id: 15125 };
-    const { loading, error, data } = useQuery(GET_FILMS, { variables });
+    const { loading, error, data } = useQuery(TEST, { variables });
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+    if (loading) return <Loading />;
+    // if (error) return <ErrorPage />;
     console.log(data)
     // return data.locations.map((el: { id: React.Key | null | undefined; photo: any; name: any; description: any; }) => (
     //   <div key={el.id}>
@@ -28,7 +29,10 @@ export default function App() {
 
   }
   return (
-    //<DisplayLocations />
-    <Router />
+    <>
+      {/* <DisplayLocations /> */}
+      <Router />
+    </>
+
   );
 }

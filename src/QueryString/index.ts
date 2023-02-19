@@ -41,3 +41,19 @@ export const GET_FILMS = gql`query Query {
   }
 }
 `
+export const GITHUD_GET_SCHEMA = gql`query {
+  __schema {
+    types {
+      name
+      kind
+      description
+      fields {
+        name
+      }
+    }
+  }
+}`
+
+export const TEST = gql`{
+  test 
+}`

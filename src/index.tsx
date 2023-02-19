@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import { RetryLink } from '@apollo/client/link/retry';
 
 // const directionalLink = new RetryLink().split(
@@ -11,13 +12,29 @@ import { RetryLink } from '@apollo/client/link/retry';
 //   new HttpLink({ uri: "http://localhost:4000/v1/graphql" }),
 //   new HttpLink({ uri: "http://localhost:4000/v2/graphql" })
 // );
+const httpLink = createHttpLink({
+  uri: 'https://api.github.com/graphql',
+});
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = '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'
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    }
+  }
+});
 
 const client = new ApolloClient({
   //uri: 'https://flyby-gateway.herokuapp.com/',
   //uri: 'https://graphql.anilist.co',
   //uri: 'https://api.github.com/graphql',
-  uri: ' https://swapi-graphql.netlify.app/.netlify/functions/index',
+ // uri: ' https://swapi-graphql.netlify.app/.netlify/functions/index',
   //link: directionalLink,
+  //link: authLink.concat(httpLink),
+  uri: 'http://localhost:9000/graphiql',
   cache: new InMemoryCache(),
 });
 const initValue = {
