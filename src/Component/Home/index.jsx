@@ -1,6 +1,6 @@
 import React from "react";
 import SearchResult from "../SearchResult";
-import BookingForm from "./bookingForm";
+import BookingForm from "./BookingForm";
 
 const Home = () => {
     return (<>
