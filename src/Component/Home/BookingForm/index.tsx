@@ -1,5 +1,8 @@
-import React from 'react';
+import React from 'react'
 import ThemeDatePicker from "../../../ThemeUI/datepicker";
+import ThemeInput from '../../../ThemeUI/input';
+import ThemeSelect from '../../../ThemeUI/select';
+import useStyles from './styles';
 // require('../../assets/css/responsive.css');
 // require('../../assets/css/navber.css');
 // require('../../assets/css/bootstrap.min.css');
@@ -12,10 +15,9 @@ import ThemeDatePicker from "../../../ThemeUI/datepicker";
 // require('../../assets/css/style.css');
 
 const BookingForm = () => {
-
+    const classes = useStyles();
     return (
         <>
-            {/* <!-- Form Area --> */}
             <section className="fligth_top_search_main_form_wrapper" style={{ zIndex: 999 }}>
                 <div className="container">
                     <div className="row">
@@ -28,30 +30,20 @@ const BookingForm = () => {
                                                 <div className="flight_categories_search">
                                                     <ul className="nav nav-tabs" role="tablist">
                                                         <li className="nav-item" role="presentation">
-                                                            <button className="nav-link active" id="oneway-tab" data-bs-toggle="tab"
-                                                                data-bs-target="#oneway_flight" type="button" role="tab"
-                                                                aria-controls="oneway_flight" aria-selected="true">One
-                                                                Way</button>
+                                                            <button className="nav-link active">OneWay</button>
                                                         </li>
                                                         <li className="nav-item" role="presentation">
-                                                            <button className="nav-link" id="roundtrip-tab" data-bs-toggle="tab"
-                                                                data-bs-target="#roundtrip" type="button" role="tab"
-                                                                aria-controls="roundtrip"
-                                                                aria-selected="false">Roundtrip</button>
+                                                            <button className="nav-link">Roundtrip</button>
                                                         </li>
                                                         <li className="nav-item" role="presentation">
-                                                            <button className="nav-link" id="multi_city-tab" data-bs-toggle="tab"
-                                                                data-bs-target="#multi_city" type="button" role="tab"
-                                                                aria-controls="multi_city" aria-selected="false">Multi
-                                                                city</button>
+                                                            <button className="nav-link">Multi city</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="tab-content" id="myTabContent1">
-                                            <div className="tab-pane fade show active" id="oneway_flight" role="tabpanel"
-                                                aria-labelledby="oneway-tab">
+                                        <div className="tab-content" >
+                                            <div className="tab-pane fade show active">
                                                 <div className="row">
                                                     <div className="col-lg-12">
                                                         <div className="oneway_search_form">
@@ -59,7 +51,8 @@ const BookingForm = () => {
                                                                 <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                     <div className="flight_Search_boxed">
                                                                         <p>From</p>
-                                                                        <input type="text" value="New York" />
+                                                                        {/* <input type="text" value="New York" /> */}
+                                                                        <ThemeSelect />
                                                                         <span> JFK - John F. Kennedy International...</span>
                                                                         <div className="plan_icon_posation">
                                                                             <i className="fas fa-plane-departure"></i>
@@ -69,7 +62,7 @@ const BookingForm = () => {
                                                                 <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                     <div className="flight_Search_boxed">
                                                                         <p>To</p>
-                                                                        <input type="text" value="London " />
+                                                                        {/* <input type="text" value="London " /> */}
                                                                         <span>LCY, London city airport </span>
                                                                         <div className="plan_icon_posation">
                                                                             <i className="fas fa-plane-arrival"></i>
@@ -96,11 +89,7 @@ const BookingForm = () => {
                                                                         className="flight_Search_boxed dropdown_passenger_area">
                                                                         <p>Passenger, class</p>
                                                                         <div className="dropdown">
-                                                                            <button className="dropdown-toggle final-count"
-                                                                                data-toggle="dropdown" type="button"
-                                                                                id="dropdownMenuButton1"
-                                                                                data-bs-toggle="dropdown"
-                                                                                aria-expanded="false">
+                                                                            <button className="dropdown-toggle final-count">
                                                                                 0 Passenger
                                                                             </button>
                                                                             <div className="dropdown-menu dropdown_passenger_info"
@@ -220,7 +209,7 @@ const BookingForm = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="tab-pane fade" id="roundtrip" role="tabpanel"
+                                            <div className="tab-pane fade" role="tabpanel"
                                                 aria-labelledby="roundtrip-tab">
                                                 <div className="row">
                                                     <div className="col-lg-12">
@@ -230,7 +219,7 @@ const BookingForm = () => {
                                                                     <div className="col-lg-3  col-md-6 col-sm-12 col-12">
                                                                         <div className="flight_Search_boxed">
                                                                             <p>From</p>
-                                                                            <input type="text" value="New York" />
+                                                                            {/* <input type="text" value="New York" /> */}
                                                                             <span>JFK - John F. Kennedy International...</span>
                                                                             <div className="plan_icon_posation">
                                                                                 <i className="fas fa-plane-departure"></i>
@@ -240,7 +229,7 @@ const BookingForm = () => {
                                                                     <div className="col-lg-3  col-md-6 col-sm-12 col-12">
                                                                         <div className="flight_Search_boxed">
                                                                             <p>To</p>
-                                                                            <input type="text" value="London " />
+                                                                            {/* <input type="text" value="London " /> */}
                                                                             <span>LCY, London city airport </span>
                                                                             <div className="plan_icon_posation">
                                                                                 <i className="fas fa-plane-arrival"></i>
@@ -255,12 +244,12 @@ const BookingForm = () => {
                                                                             <div className="flight_Search_boxed date_flex_area">
                                                                                 <div className="Journey_date">
                                                                                     <p>Journey date</p>
-                                                                                    <input type="date" value="2022-05-05" />
+                                                                                    {/* <input type="date" value="2022-05-05" /> */}
                                                                                     <span>Thursday</span>
                                                                                 </div>
                                                                                 <div className="Journey_date">
                                                                                     <p>Return date</p>
-                                                                                    <input type="date" value="2022-05-08" />
+                                                                                    {/* <input type="date" value="2022-05-08" /> */}
                                                                                     <span>Saturday</span>
                                                                                 </div>
                                                                             </div>
@@ -271,11 +260,7 @@ const BookingForm = () => {
                                                                             className="flight_Search_boxed dropdown_passenger_area">
                                                                             <p>Passenger, className </p>
                                                                             <div className="dropdown">
-                                                                                <button className="dropdown-toggle final-count"
-                                                                                    data-toggle="dropdown" type="button"
-                                                                                    id="dropdownMenuButton1"
-                                                                                    data-bs-toggle="dropdown"
-                                                                                    aria-expanded="false">
+                                                                                <button className="dropdown-toggle final-count">
                                                                                     0 Passenger
                                                                                 </button>
                                                                                 <div className="dropdown-menu dropdown_passenger_info"
@@ -392,7 +377,7 @@ const BookingForm = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="tab-pane fade" id="multi_city" role="tabpanel"
+                                            <div className="tab-pane fade" role="tabpanel"
                                                 aria-labelledby="multi_city-tab">
                                                 <div className="row">
                                                     <div className="col-lg-12">
@@ -404,7 +389,7 @@ const BookingForm = () => {
                                                                             <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                                 <div className="flight_Search_boxed">
                                                                                     <p>From</p>
-                                                                                    <input type="text" value="New York" />
+                                                                                    {/* <input type="text" value="New York" /> */}
                                                                                     <span>DAC, Hazrat Shahajalal
                                                                                         International...</span>
                                                                                     <div className="plan_icon_posation">
@@ -415,7 +400,7 @@ const BookingForm = () => {
                                                                             <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                                 <div className="flight_Search_boxed">
                                                                                     <p>To</p>
-                                                                                    <input type="text" value="London " />
+                                                                                    {/* <input type="text" value="London " /> */}
                                                                                     <span>LCY, London city airport </span>
                                                                                     <div className="plan_icon_posation">
                                                                                         <i className="fas fa-plane-arrival"></i>
@@ -431,14 +416,14 @@ const BookingForm = () => {
                                                                                         className="flight_Search_boxed date_flex_area">
                                                                                         <div className="Journey_date">
                                                                                             <p>Journey date</p>
-                                                                                            <input type="date"
-                                                                                                value="2022-05-05" />
+                                                                                            {/* <input type="date"
+                                                                                                value="2022-05-05" /> */}
                                                                                             <span>Thursday</span>
                                                                                         </div>
                                                                                         <div className="Journey_date">
                                                                                             <p>Return date</p>
-                                                                                            <input type="date"
-                                                                                                value="2022-05-10" />
+                                                                                            {/* <input type="date"
+                                                                                                value="2022-05-10" /> */}
                                                                                             <span>Saturday</span>
                                                                                         </div>
                                                                                     </div>
@@ -450,11 +435,7 @@ const BookingForm = () => {
                                                                                     <p>Passenger, className </p>
                                                                                     <div className="dropdown">
                                                                                         <button
-                                                                                            className="dropdown-toggle final-count"
-                                                                                            data-toggle="dropdown" type="button"
-                                                                                            id="dropdownMenuButton1"
-                                                                                            data-bs-toggle="dropdown"
-                                                                                            aria-expanded="false">
+                                                                                            className="dropdown-toggle final-count">
                                                                                             0 Passenger
                                                                                         </button>
                                                                                         <div className="dropdown-menu dropdown_passenger_info"
@@ -595,7 +576,7 @@ const BookingForm = () => {
                                                                             <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                                 <div className="flight_Search_boxed">
                                                                                     <p>From</p>
-                                                                                    <input type="text" value="New York" />
+                                                                                    {/* <input type="text" value="New York" /> */}
                                                                                     <span>DAC, Hazrat Shahajalal
                                                                                         International...</span>
                                                                                     <div className="plan_icon_posation">
@@ -606,7 +587,7 @@ const BookingForm = () => {
                                                                             <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                                                                                 <div className="flight_Search_boxed">
                                                                                     <p>To</p>
-                                                                                    <input type="text" value="London " />
+                                                                                    {/* <input type="text" value="London " /> */}
                                                                                     <span>LCY, London city airport </span>
                                                                                     <div className="plan_icon_posation">
                                                                                         <i className="fas fa-plane-arrival"></i>
@@ -622,14 +603,14 @@ const BookingForm = () => {
                                                                                         className="flight_Search_boxed date_flex_area">
                                                                                         <div className="Journey_date">
                                                                                             <p>Journey date</p>
-                                                                                            <input type="date"
-                                                                                                value="2022-05-05" />
+                                                                                            {/* <input type="date"
+                                                                                                value="2022-05-05" /> */}
                                                                                             <span>Thursday</span>
                                                                                         </div>
                                                                                         <div className="Journey_date">
                                                                                             <p>Return date</p>
-                                                                                            <input type="date"
-                                                                                                value="2022-05-12" />
+                                                                                            {/* <input type="date"
+                                                                                                value="2022-05-12" /> */}
                                                                                             <span>Saturday</span>
                                                                                         </div>
                                                                                     </div>
@@ -641,11 +622,7 @@ const BookingForm = () => {
                                                                                     <p>Passenger, className </p>
                                                                                     <div className="dropdown">
                                                                                         <button
-                                                                                            className="dropdown-toggle final-count"
-                                                                                            data-toggle="dropdown" type="button"
-                                                                                            id="dropdownMenuButton1"
-                                                                                            data-bs-toggle="dropdown"
-                                                                                            aria-expanded="false">
+                                                                                            className="dropdown-toggle final-count">
                                                                                             0 Passenger
                                                                                         </button>
                                                                                         <div className="dropdown-menu dropdown_passenger_info"
@@ -785,7 +762,7 @@ const BookingForm = () => {
                                                                 <div className="row">
                                                                     <div className="col-lg-12">
                                                                         <div className="add_multy_form">
-                                                                            <button type="button" id="addMulticityRow">+ Add
+                                                                            <button type="button">+ Add
                                                                                 another
                                                                                 flight</button>
                                                                         </div>

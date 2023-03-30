@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { palette } from '../Constant/theme';
 import { Input } from '@mui/material';
-
+import { ThemeProvider } from '@material-ui/styles';
+import theme from './config';
 const ThemeInput = (props) => {
     return (
-        <Input color={props?.color ? props.color : palette.primary.main} {...props}>{props?.textValue}</Input>
+        <ThemeProvider theme={theme}>
+            <Input color={props?.color ? props.color : 'primary'} {...props}></Input>
+        </ThemeProvider>
     );
 }
 export default ThemeInput;

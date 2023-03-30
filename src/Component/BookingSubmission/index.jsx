@@ -34,28 +34,28 @@ const BookingSubmission = () => {
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault1" value="red" />
-                                                <label className="form-check-label" for="flexRadioDefault1">
+                                                <label className="form-check-label" >
                                                     Payment by card
                                                 </label>
                                             </div>
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault2" value="green" />
-                                                <label className="form-check-label" for="flexRadioDefault2">
+                                                <label className="form-check-label" >
                                                     Paypal
                                                 </label>
                                             </div>
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault3" value="black" />
-                                                <label className="form-check-label" for="flexRadioDefault3">
+                                                <label className="form-check-label" >
                                                     Payoneer
                                                 </label>
                                             </div>
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault4" value="white" />
-                                                <label className="form-check-label" for="flexRadioDefault4">
+                                                <label className="form-check-label" >
                                                     Cash on delivery
                                                 </label>
                                             </div>
@@ -116,7 +116,7 @@ const BookingSubmission = () => {
                             <div className="booking_tour_form_submit">
                                 <div className="form-check write_spical_check">
                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefaultf1" />
-                                    <label className="form-check-label" for="flexCheckDefaultf1">
+                                    <label className="form-check-label" >
                                         I read and accept all <a href="terms-service.html">Terms and conditios</a>
 
                                     </label>
