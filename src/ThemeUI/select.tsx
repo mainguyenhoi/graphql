@@ -3,7 +3,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { FormControl, InputLabel } from "@mui/material";
-const ThemeSelect = (props) => {
+const ThemeSelect = (props: any) => {
     const ITEM_HEIGHT = 48;
     const ITEM_PADDING_TOP = 8;
     const MenuProps = {
@@ -16,7 +16,7 @@ const ThemeSelect = (props) => {
     };
     const [option, setOption] = React.useState('');
 
-    const handleChange = (event) => {
+    const handleChange = (event: any) => {
         setOption(String(event.target.value));
     };
 

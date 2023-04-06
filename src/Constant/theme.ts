@@ -35,3 +35,11 @@ export const devices ={
         min: 1025,
     }
 }
+
+export interface ThemeDatePickerProps {
+    topText?: string,
+    children: any,
+    bottomText?: string,
+    classIcon?: string,
+    nameIcon?:string,
+}

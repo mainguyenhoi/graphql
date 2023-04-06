@@ -1,7 +1,7 @@
 import { Collapse } from "@mui/material";
 import Images from "../../assets/img";
 
-const TicketDeTail = (props) => {
+const TicketDeTail = (props:any) => {
     return (<>
         <Collapse in={props.collapse} >
             <div className="flight_policy_refund collapse" id="collapseExample2" style={{ display: 'block' }}>

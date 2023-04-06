@@ -9,6 +9,10 @@ const useStyle = makeStyles(
             padding: 5,
           
         },
+        flightBox:{
+            width: '90%'
+
+        }
     }),
     { name: 'BookingForm' }
 );

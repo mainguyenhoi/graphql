@@ -1,18 +1,8 @@
-import React from 'react'
+import React from 'react';
 import ThemeDatePicker from "../../../ThemeUI/datepicker";
-import ThemeInput from '../../../ThemeUI/input';
 import ThemeSelect from '../../../ThemeUI/select';
+import FlightBox from '../../../ThemeUI/flightBox';
 import useStyles from './styles';
-// require('../../assets/css/responsive.css');
-// require('../../assets/css/navber.css');
-// require('../../assets/css/bootstrap.min.css');
-// require('../../assets/css/animate.min.css');
-// require('../../assets/css/fontawesome.all.min.css');
-// require('../../assets/css/meanmenu.css');
-// require('../../assets/css/owl.carousel.min.css');
-// require('../../assets/css/nouislider.css');
-// require('../../assets/css/owl.theme.default.min.css');
-// require('../../assets/css/style.css');
 
 const BookingForm = () => {
     const classes = useStyles();
@@ -48,42 +38,29 @@ const BookingForm = () => {
                                                     <div className="col-lg-12">
                                                         <div className="oneway_search_form">
                                                             <div className="row">
-                                                                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-                                                                    <div className="flight_Search_boxed">
-                                                                        <p>From</p>
-                                                                        {/* <input type="text" value="New York" /> */}
-                                                                        <ThemeSelect />
-                                                                        <span> JFK - John F. Kennedy International...</span>
-                                                                        <div className="plan_icon_posation">
-                                                                            <i className="fas fa-plane-departure"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-                                                                    <div className="flight_Search_boxed">
-                                                                        <p>To</p>
-                                                                        {/* <input type="text" value="London " /> */}
-                                                                        <span>LCY, London city airport </span>
-                                                                        <div className="plan_icon_posation">
-                                                                            <i className="fas fa-plane-arrival"></i>
-                                                                        </div>
-                                                                        <div className="range_plan">
-                                                                            <i className="fas fa-exchange-alt"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-4  col-md-6 col-sm-12 col-12">
-                                                                    <div className="form_search_date">
-                                                                        <div className="flight_Search_boxed date_flex_area">
-                                                                            <div className="Journey_date">
-                                                                                <p>Journey date</p>
-                                                                                {/* <input type="date" value="2022-05-05" /> */}
-                                                                                <ThemeDatePicker />
-                                                                                <span>Thursday</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <FlightBox
+                                                                    topText={'From'}
+                                                                    bottomText={'JFK - John F. Kennedy International...'}
+                                                                    classIcon={'plan_icon_posation'}
+                                                                    nameIcon={'fas fa-plane-departure'}
+                                                                >
+                                                                    <ThemeSelect />
+                                                                </FlightBox>
+                                                                <FlightBox
+                                                                    topText={'To'}
+                                                                    bottomText={'LCY, London city airport'}
+                                                                    classIcon={'plan_icon_posation'}
+                                                                    nameIcon={'fas fa-plane-arrival'}
+                                                                >
+                                                                    <ThemeSelect />
+                                                                </FlightBox>
+                                                                <FlightBox
+                                                                    topText={'Journey date'}
+                                                                    bottomText={'Thursday'}
+                                                                >
+                                                                    <ThemeDatePicker />
+                                                                </FlightBox>
+                                                               
                                                                 <div className="col-lg-2  col-md-6 col-sm-12 col-12">
                                                                     <div
                                                                         className="flight_Search_boxed dropdown_passenger_area">

@@ -7,8 +7,9 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { isMobile } from "react-device-detect";
 import useStyle from './style';
-const ThemeDatePicker = (props) => {
-    const [value, setValue] = React.useState(null);
+
+const ThemeDatePicker = (props: any) => {
+    const [value, setValue] = React.useState<any>();
     const classes = useStyle();
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -21,7 +22,7 @@ const ThemeDatePicker = (props) => {
                             setValue(newValue);
                         }}
 
-                        renderInput={(params) => <TextField {...params} />}
+                        renderInput={(params) => <TextField {...params} placeholder={props?.placeholder} />}
                     /> : <DesktopDatePicker
                         {...props}
                         value={value}

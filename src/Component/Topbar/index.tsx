@@ -82,7 +82,7 @@ const TopBar = () => {
                     </div>
                 </div>
                 <div className="main-navbar" style={{
-                    position: 'sticky !important',
+                    position: 'sticky',
                     top: '0'
                 }}>
                     <div className="container">

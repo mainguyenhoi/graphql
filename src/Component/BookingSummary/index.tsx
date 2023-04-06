@@ -61,7 +61,7 @@ const BookingSummary = () => {
                             </div>
                             <div className="edit_date_form">
                                 <div className="form-group">
-                                    <label for="dates">Edit Date</label>
+                                    <label >Edit Date</label>
                                     <input type="date" value="2022-05-05" className="form-control" id="dates" />
                                 </div>
                             </div>
