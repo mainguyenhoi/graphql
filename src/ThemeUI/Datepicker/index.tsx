@@ -6,7 +6,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { isMobile } from "react-device-detect";
-import useStyle from './style';
+import useStyle from './styles';
 
 const ThemeDatePicker = (props: any) => {
     const [value, setValue] = React.useState<any>();

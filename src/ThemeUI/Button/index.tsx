@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import { palette } from '../Constant/theme';
+import { palette } from '../../Constant/theme';
 
 const ThemeButton = (props:any) => {
     return (

@@ -1,4 +1,4 @@
-import ThemeDatePicker from "../../ThemeUI/datepicker";
+import ThemeDatePicker from "../../ThemeUI/Datepicker";
 import AddOnType from "./AddOnType";
 
 const AddOn = () => {

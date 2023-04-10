@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Input } from '@mui/material';
 import { ThemeProvider } from '@material-ui/styles';
-import theme from './config';
+import theme from '../config';
 const ThemeInput = (props: any) => {
     return (
         <ThemeProvider theme={theme}>

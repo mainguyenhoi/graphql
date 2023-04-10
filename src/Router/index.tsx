@@ -3,7 +3,6 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link
 } from "react-router-dom";
 import HotelBooking from "../Component/HotelBooking";
 import Header from "../Component/Topbar";

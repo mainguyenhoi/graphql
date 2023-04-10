@@ -44,9 +44,9 @@ const TopBar = () => {
                                             <span className="lang-name"></span>
                                         </button>
                                         <div className="dropdown-menu language-dropdown-menu">
-                                            <a className="dropdown-item" href="#">English</a>
-                                            <a className="dropdown-item" href="#">Arabic</a>
-                                            <a className="dropdown-item" href="#">French</a>
+                                            <a className="dropdown-item" >English</a>
+                                            <a className="dropdown-item" >Arabic</a>
+                                            <a className="dropdown-item" >French</a>
                                         </div>
                                     </div>
                                 </li>
@@ -57,9 +57,9 @@ const TopBar = () => {
                                             <span className="lang-name"></span>
                                         </button>
                                         <div className="dropdown-menu language-dropdown-menu">
-                                            <a className="dropdown-item" href="#">USD</a>
-                                            <a className="dropdown-item" href="#">BD</a>
-                                            <a className="dropdown-item" href="#">URO</a>
+                                            <a className="dropdown-item" >USD</a>
+                                            <a className="dropdown-item" >BD</a>
+                                            <a className="dropdown-item" >URO</a>
                                         </div>
                                     </div>
                                 </li>
@@ -107,7 +107,7 @@ const TopBar = () => {
                             <div className="option-inner">
                                 <div className="others-options d-flex align-items-center">
                                     <div className="option-item">
-                                        <a href="#" className="search-box"><i className="fas fa-search"></i></a>
+                                        <a className="search-box"><i className="fas fa-search"></i></a>
                                     </div>
                                     <div className="option-item">
                                         <a href="contact.html" className="btn  btn_navber">Get free quote</a>

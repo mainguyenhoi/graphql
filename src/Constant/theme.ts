@@ -36,10 +36,3 @@ export const devices ={
     }
 }
 
-export interface ThemeDatePickerProps {
-    topText?: string,
-    children: any,
-    bottomText?: string,
-    classIcon?: string,
-    nameIcon?:string,
-}
